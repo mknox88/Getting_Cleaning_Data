@@ -1,5 +1,16 @@
+## Script to prepare a tidy data set from data collected from the accelerometers of the Samsung
+## Galaxy S smartphone downloaded from the course website
 
-setwd("~/Documents/5 - Miscellaneous/3 - Coursera/Getting and Cleaning Data/data/UCI HAR Dataset")
+## This script assumes the following input data files are in the current working directory
+## (and 'test' and 'train' subdirectories of the current working directory):
+##  activity_labels.txt
+##  features.txt
+##  ./test/subject_test.txt
+##  ./test/X_test.txt
+##  ./test/y_test.txt
+##  ./train/subject_train.txt
+##  ./train/X_train.txt
+##  ./train/y_train.txt
 
 ## 1. Merge the training and test sets to create one data set
 

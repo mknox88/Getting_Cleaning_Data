@@ -3,6 +3,11 @@ coursera-project-03
 
 Course project for Coursera Getting and Cleaning Data class
 
+## Overview:
+This project includes a script ('run_analysis.R') to prepare a tidy data set from data collected from the accelerometers of the Samsung Galaxy S smartphone downloaded from the course website. The data collected is a series of measurements from 30 subjects performing various activities, including laying, sitting, standing, walking, walking upstairs, and walking downstairs.
+
+The CodeBook.md file describes the variables and transformations used to create this tidy data set
+
 ## Inputs:
 This script assumes the following input data files are in the current working directory (and 'test' and 'train' subdirectories of the current working directory):
 - activity_labels.txt
@@ -39,7 +44,8 @@ This script writes the resulting tidy data set to the current working directory 
 
 ### Step 2: Extract only the measurements on the mean and standard deviation for each measurement
 - read features.txt into features dataframe using read.table()
-- get the feature numbers for all feature measurements with 'mean()' or 'std()' in the variable name using grepl() and store them in features_selected vector (my interpretation of the assignment instructions was to exclude measurements with 'meanFreq()' in  the feature variable name because there was no corresponding Standard Deviation measurement (e.g. 'stdFreq()'))
+- get the feature numbers for all feature measurements with 'mean()' or 'std()' in the variable name using grepl() and store them in features_selected vector
+    + my interpretation of the assignment instructions was to exclude measurements with 'meanFreq()' in  the feature variable name because there was no corresponding Standard Deviation measurement (e.g. 'stdFreq()')
 - select subject(col 1), activity (col 2), and all the selected features (col # offset by 2 due to subject and activity columns) from data_combined dataframe using subsetting and store in data_filtered dataframe
 
 ### Step 3: Use descriptive activity names to name the activities in the data set
